@@ -1,0 +1,57 @@
+$dialog-title-text-color: #333;
+$dialog-content-text-color: #999;
+$dialog-button-cancel-text-color: #333;
+$dialog-button-confirm-text-color: #0bb20c;
+
+@mixin dialog-button {
+  flex: 1;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.dialog-title {
+  padding: 0 12px 10px;
+  line-height: 20px;
+  font-size: 18px;
+  color: $dialog-title-text-color;
+  word-wrap: break-word;
+}
+.dialog-content {
+  padding: 0 12px 18px;
+  max-height: 480px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 14px;
+  color: $dialog-content-text-color;
+  word-wrap: break-word;
+  .content-input {
+    padding: 8px 12px;
+    width: 100%;
+    max-height: 450px;
+    text-align: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 0 #ccc inset;
+    outline: none;
+    resize: none;
+    &:empty::before {
+      content: attr(placeholder);
+      color: lightgray;
+    }
+  }
+}
+.dialog-buttons {
+  display: flex;
+  line-height: 48px;
+  font-size: 18px;
+  .button-cancel {
+    @include dialog-button;
+    color: $dialog-button-cancel-text-color;
+  }
+  .button-confirm {
+    @include dialog-button;
+    color: $dialog-button-confirm-text-color;
+  }
+}
