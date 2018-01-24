@@ -8,6 +8,18 @@
 基于vue-router，二次封装了界面跳转时的方法（详情请看router.js）
 所有页面目前全是keepAlive的，如果要用于基于平台的WebApp开发，那么请手动加入每个界面mounted部分的代码（在子页面使用浏览器的刷新功能时页面会重新执行mounted）
 
+##基于npm安装
+
+1. npm install
+2. npm install node-sass
+3. npm install vue-loader
+4. npm install vux-loader
+5. npm install less-loader
+6. npm install vue-style-loader
+7. npm install css-loader
+
+安装完以上运行 npm run dev 在浏览器上看效果，开始开发
+
 ## src 目录下各个目录及文件简介
 
 * api 目录 (存放与接口调用相关资源)
