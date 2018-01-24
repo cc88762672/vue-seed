@@ -4,7 +4,7 @@
 
 ## 特别说明
 本项目基于vue脚手架工程进行修改，基于Vue2.0和Vux
-主要为了H5移动端项目能够快速开发使用，自带有Tabbar何XHeader，且加入了页面跳转的过渡动画
+主要为了H5移动端项目能够快速开发使用，自带有Tabbar和XHeader，且加入了页面跳转的过渡动画
 基于vue-router，二次封装了界面跳转时的方法（详情请看router.js）
 所有页面目前全是keepAlive的，如果要用于基于平台的WebApp开发，那么请手动加入每个界面mounted部分的代码（在子页面使用浏览器的刷新功能时页面会重新执行mounted）
 
@@ -47,9 +47,6 @@
 
 该项目使用的是 ydui 的 flexible 方案，因为相比阿里的 flexible 方案，这套方案用起来方便的多，当前项目设置的根字体大小为 50px，如果根据实际情况确定需要修改该字体大小，修改 config/index.js 文件中 base 对象的 remUnit 即可，目前而言，绝大多数的情况下应该不需要修改。
 
-## pre-commit eslint
-
-该项目默认启用 eslint 进行 js 代码语法检查，检查不通过时将出现以下现象：
 
 **注意：windows 系统 npm 安装 pre-commit 插件时，可能会由于权限原因，无法在 .git/hooks 目录中生成新的 pre-commit 文件，此时需要以管理员身份运行 cmd.exe，执行 `node ./node_modules/pre-commit/install.js` 就 OK 了。**
 
