@@ -1,6 +1,12 @@
 # vue-seed
 
-> lainzy seed
+> LeonChan seed
+
+## 特别说明
+本项目基于vue脚手架工程进行修改，基于Vue2.0和Vux
+主要为了H5移动端项目能够快速开发使用，自带有Tabbar何XHeader，且加入了页面跳转的过渡动画
+基于vue-router，二次封装了界面跳转时的方法（详情请看router.js）
+所有页面目前全是keepAlive的，如果要用于基于平台的WebApp开发，那么请手动加入每个界面mounted部分的代码（在子页面使用浏览器的刷新功能时页面会重新执行mounted）
 
 ## src 目录下各个目录及文件简介
 
@@ -44,17 +50,6 @@
 ## pre-commit eslint
 
 该项目默认启用 eslint 进行 js 代码语法检查，检查不通过时将出现以下现象：
-
-* 开发环境代码运行报错
-* git commit 无法提交成功
-
-当你执行 git commit 时，会在代码提交之前先执行 eslint 校验 src 目录下变更过的 js 或 vue 文件，为了提高执行速率，未变更的文件不会再次校验，如果 eslint 语法检查不通过，将会阻止本次提交。
-
-如果你非要强制提交代码，可以使用 `git commit --no-verify` (强烈不推荐，因为这样你提交的代码在团队其他成员 pull 时，会报出一大堆错误，应当确保只有在 eslint 校验成功，但出现其他未知异常导致代码无法正常提交时，才使用该选项)
-
-如果想定制 eslint 校验规则，修改 .eslintrc.js 文件
-
-如果你的项目不想使用 eslint，将 config/index.js 文件中的 base.useEslint 设置为 false 即可 (推荐启用 eslint)
 
 **注意：windows 系统 npm 安装 pre-commit 插件时，可能会由于权限原因，无法在 .git/hooks 目录中生成新的 pre-commit 文件，此时需要以管理员身份运行 cmd.exe，执行 `node ./node_modules/pre-commit/install.js` 就 OK 了。**
 
