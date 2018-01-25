@@ -4,8 +4,8 @@
     <view-box ref="viewBox">
       <div class="title">Page3</div>
       <div class="shelter-item">
-        <img class="portrait shrink1" :src="detailInfo.image"/>
-        <div class="description shrink2">{{detailInfo.msg}}</div>
+        <img class="portrait left-image" :src="detailInfo.image"/>
+        <div class="description">{{detailInfo.msg}}</div>
       </div>
     </view-box>
   </div>
@@ -93,12 +93,6 @@
     opacity: 0.6;
     transition: all .1s linear;
   }
-  .shrink1{
-    flex-shrink: 1;
-  }
-  .shrink2{
-    flex-shrink: 2;
-  }
   .portrait{
     width: 80px;
     height: 80px;
@@ -109,5 +103,8 @@
     color: #1b1b1b;
     font-size: 16px;
     text-align: left;
+  }
+  .left-image{
+    min-width: 80px;
   }
 </style>
