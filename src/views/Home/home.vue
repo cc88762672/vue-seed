@@ -4,8 +4,8 @@
    <div class="title">Home Page</div>
    <div class="shelter">
      <div class="shelter-item" v-for="item in listData" @click="checkDetail(item)">
-       <img class="portrait shrink1" :src="item.image"/>
-       <div class="description shrink2">{{item.msg}}</div>
+       <img class="portrait left-image" :src="item.image"/>
+       <div class="description">{{item.msg}}</div>
      </div>
    </div>
   </view-box>
@@ -103,11 +103,8 @@
     opacity: 0.6;
     transition: all .1s linear;
   }
-  .shrink1{
-    flex-shrink: 1;
-  }
-  .shrink2{
-    flex-shrink: 2;
+  .left-image{
+    min-width: 80px;
   }
   .portrait{
     width: 80px;

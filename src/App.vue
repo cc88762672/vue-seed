@@ -128,7 +128,7 @@
   .fade-out-enter-active,
   .fade-in-leave-active,
   .fade-out-leave-active{
-    transition: all .3s ease-in;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
   .fade-out-enter,.fade-in-leave-to{
     position: absolute;

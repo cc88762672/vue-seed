@@ -55,5 +55,6 @@
     margin-left: 2%;
     margin-top: 10px;
     border-radius: 5px;
+    border: none;
   }
 </style>
