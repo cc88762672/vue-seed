@@ -1,5 +1,6 @@
 <template>
   <div class="detail">
+    <x-header title="Page3" :left-options="{backText:'Back',preventGoBack:'true'}" @on-click-back="goBack()"></x-header>
     <view-box ref="viewBox">
       <div class="title">Page3</div>
       <div class="shelter-item">
@@ -10,7 +11,7 @@
   </div>
 </template>
 <script>
-  import{ViewBox} from 'vux';
+  import{ViewBox,XHeader} from 'vux';
   export default{
     data(){
       return{
@@ -18,10 +19,14 @@
       }
     },
     methods:{
-
+      goBack(){
+        var vm = this;
+        vm.$router.forwardPage();
+      }
     },
     components:{
-      ViewBox
+      ViewBox,
+      XHeader
     },
     beforeRouteEnter(to,from,next){
       next((vm)=>{
@@ -83,6 +88,10 @@
     border: 1px solid #1b1b1b;
     border-radius: 5px;
     margin-bottom: 10px;
+  }
+  .shelter-item:active{
+    opacity: 0.6;
+    transition: all .1s linear;
   }
   .shrink1{
     flex-shrink: 1;

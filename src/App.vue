@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <transition name="tani">
-     <x-header title="Child Page" :left-options="{backText:'Back',preventGoBack:'true'}" @on-click-back="goBack()" v-if="showTop"></x-header>
-    </transition>
     <transition :name="transitionName">
       <keep-alive>
        <router-view></router-view>
@@ -32,7 +29,6 @@
       return{
         transitionName:'fade-in',
         showTab:true,
-        showTop:false,
         appTabsData:[
           {
             route:'home',
@@ -53,18 +49,11 @@
         ]
       }
     },
-    methods:{
-     goBack(){
-       var vm = this;
-       vm.$router.forwardPage();
-     }
-    },
     watch:{
      '$route.name'(){
        var vm = this;
        if(vm.$route.name!='home' && vm.$route.name!='box'){
          vm.showTab = false;
-         vm.showTop = true;
        }else{
          switch(vm.$route.name){
            case'home':
@@ -77,7 +66,6 @@
            break;
          }
          vm.showTab = true;
-         vm.showTop = false;
        }
      },
      '$route'(to,from){
@@ -157,107 +145,6 @@
     opacity: 0;
     -webkit-transform: translate3d(-100, 0, 0);
     transform: translate3d(-100%, 0, 0);
-  }
-  .bani-enter-active{
-    animation: fadeInUp .3s;
-    -webkit-animation: fadeInUp .3s;
-  }
-  .bani-leave-active{
-    animation: fadeOutDown .3s;
-    -webkit-animation: fadeOutDown .3s;
-  }
-  .tani-enter-active{
-    animation: fadeInDown .3s;
-    -webkit-animation: fadeInDown .3s;
-  }
-  .tani-leave-active{
-    animation: fadeOutUp .3s;
-    -webkit-animation: fadeOutUp .3s;
-  }
-  @-webkit-keyframes fadeInUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0); }
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none; } }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0); }
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none; } }
-  @-webkit-keyframes fadeOutDown {
-    from {
-      opacity: 1; }
-    to {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0); } }
-
-  @keyframes fadeOutDown {
-    from {
-      opacity: 1; }
-    to {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0); } }
-
-  @-webkit-keyframes fadeInDown {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  @-webkit-keyframes fadeOutUp {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-  }
-
-  @keyframes fadeOutUp {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
   }
 </style>
 

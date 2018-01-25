@@ -1,5 +1,6 @@
 <template>
   <div class="son">
+    <x-header title="Page4" :left-options="{backText:'Back',preventGoBack:'true'}" @on-click-back="goBack()"></x-header>
     <view-box ref="viewBox">
       <div class="title">Page4</div>
       <button class="back-button" @click="goBack()">Go Back</button>
@@ -7,7 +8,7 @@
   </div>
 </template>
 <script>
-  import{ViewBox} from 'vux';
+  import{ViewBox,XHeader} from 'vux';
   export default{
     data(){
       return{
@@ -21,7 +22,8 @@
       }
     },
     components:{
-      ViewBox
+      ViewBox,
+      XHeader
     },
     beforeRouteEnter(to,from,next){
       next((vm)=>{

@@ -99,6 +99,10 @@
     border-radius: 5px;
     margin-bottom: 10px;
   }
+  .shelter-item:active{
+    opacity: 0.6;
+    transition: all .1s linear;
+  }
   .shrink1{
     flex-shrink: 1;
   }
