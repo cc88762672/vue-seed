@@ -10,13 +10,7 @@
 
 ##基于npm安装
 
-1. npm install
-2. npm install node-sass
-3. npm install vue-loader
-4. npm install vux-loader
-5. npm install less-loader
-6. npm install vue-style-loader
-7. npm install css-loader
+npm install
 
 安装完以上运行 npm run dev 在浏览器上看效果，开始开发
 
