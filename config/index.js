@@ -1,55 +1,53 @@
 // Template version: 1.1.3
 // see http://vuejs-templates.github.io/webpack for documentation.
-
+/*eslint-disable*/
 const path = require('path');
 
 module.exports = {
-  base: {
-    useEslint: true, // 启用eslint
-    eslintEmitWarning: true, // eslint校验不通过时使用warning提示，默认为error
-    useFlexible: true, // 启用flexible
-    remUnit: 50, // 启用flexible时的根字体大小(px)
-  },
-  build: {
-    env: require('./prod.env'),
-    // https://doc.webpack-china.org/configuration/devtool
-    devtool: '#source-map',
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: './',
-    productionSourceMap: true,
-    // Gzip off by default as many popular static hosts such as
-    // Surge or Netlify already gzip all static assets for you.
-    // Before setting to `true`, make sure to:
-    // npm install --save-dev compression-webpack-plugin
-    productionGzip: false,
-    productionGzipExtensions: ['js', 'css'],
-    // Run the build command with an extra argument to
-    // View the bundle analyzer report after build finishes:
-    // `npm run build --report`
-    // Set to `true` or `false` to always turn it on or off
-    bundleAnalyzerReport: process.env.npm_config_report,
-  },
-  dev: {
-    env: require('./dev.env'),
-    // cheap-module-eval-source-map is faster for development
-    devtool: '#cheap-module-eval-source-map',
-    port: process.env.PORT || 8080,
-    autoOpenBrowser: true,
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    proxyTable: {},
-    // CSS Sourcemaps off by default because relative paths are "buggy"
-    // with this option, according to the CSS-Loader README
-    // (https://github.com/webpack/css-loader#sourcemaps)
-    // In our experience, they generally work as expected,
-    // just be aware of this issue when enabling this option.
-    cssSourceMap: false,
-  },
-  test: {
-    env: require('./test.env'),
-    // use inline sourcemap for karma-sourcemap-loader
-    devtool: '#inline-source-map',
-  },
+    base: {
+        useEslint: true, // 启用eslint
+        eslintEmitWarning: true // eslint校验不通过时使用warning提示，默认为error
+    },
+    build: {
+        env: require('./prod.env'),
+        // https://doc.webpack-china.org/configuration/devtool
+        devtool: '#source-map',
+        index: path.resolve(__dirname, '../dist/index.html'),
+        assetsRoot: path.resolve(__dirname, '../dist'),
+        assetsSubDirectory: 'static',
+        assetsPublicPath: './',
+        productionSourceMap: true,
+        // Gzip off by default as many popular static hosts such as
+        // Surge or Netlify already gzip all static assets for you.
+        // Before setting to `true`, make sure to:
+        // npm install --save-dev compression-webpack-plugin
+        productionGzip: false,
+        productionGzipExtensions: ['js', 'css'],
+        // Run the build command with an extra argument to
+        // View the bundle analyzer report after build finishes:
+        // `npm run build --report`
+        // Set to `true` or `false` to always turn it on or off
+        bundleAnalyzerReport: process.env.npm_config_report,
+    },
+    dev: {
+        env: require('./dev.env'),
+        // cheap-module-eval-source-map is faster for development
+        devtool: '#cheap-module-eval-source-map',
+        port: process.env.PORT || 8080,
+        autoOpenBrowser: true,
+        assetsSubDirectory: 'static',
+        assetsPublicPath: '/',
+        proxyTable: {},
+        // CSS Sourcemaps off by default because relative paths are "buggy"
+        // with this option, according to the CSS-Loader README
+        // (https://github.com/webpack/css-loader#sourcemaps)
+        // In our experience, they generally work as expected,
+        // just be aware of this issue when enabling this option.
+        cssSourceMap: false,
+    },
+    test: {
+        env: require('./test.env'),
+        // use inline sourcemap for karma-sourcemap-loader
+        devtool: '#inline-source-map',
+    },
 };

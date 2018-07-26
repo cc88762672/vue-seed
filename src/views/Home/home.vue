@@ -12,109 +12,110 @@
  </div>
 </template>
 <script>
- import{ViewBox} from 'vux';
- import portraitA from '../../assets/images/home/a.jpeg';
- import portraitB from '../../assets/images/home/b.jpeg';
- import portraitC from '../../assets/images/home/c.jpeg';
- export default{
-   data(){
-     return{
-      listData:[
+import { ViewBox } from "vux";
+import portraitA from "../../assets/images/home/a.jpeg";
+import portraitB from "../../assets/images/home/b.jpeg";
+import portraitC from "../../assets/images/home/c.jpeg";
+export default {
+  data() {
+    return {
+      listData: [
         {
-         msg:'Welcome to vue seed project',
-         image:portraitA
+          msg: "Welcome to vue seed project",
+          image: portraitA
         },
         {
-         msg:'This project is the combination of vue and vux',
-         image:portraitB
+          msg: "This project is the combination of vue and vux",
+          image: portraitB
         },
         {
-         msg:'I do hope you like it',
-         image:portraitC
+          msg: "I do hope you like it",
+          image: portraitC
         },
         {
-          msg:'Welcome to vue seed project',
-          image:portraitA
+          msg: "Welcome to vue seed project",
+          image: portraitA
         },
         {
-          msg:'This project is the combination of vue and vux',
-          image:portraitB
+          msg: "This project is the combination of vue and vux",
+          image: portraitB
         },
         {
-          msg:'I do hope you like it',
-          image:portraitC
+          msg: "I do hope you like it",
+          image: portraitC
         }
       ]
-     }
-   },
-   methods:{
-    checkDetail(item){
+    };
+  },
+  methods: {
+    checkDetail(item) {
       var vm = this;
-      vm.$router.pushPage({name:'detail',
-        params:{
-          data:item
+      vm.$router.pushPage({
+        name: "detail",
+        params: {
+          data: item
         }
       });
     }
-   },
-   components:{
-     ViewBox
-   }
- };
+  },
+  components: {
+    ViewBox
+  }
+};
 </script>
 <style scoped>
-  select:focus{
-    outline: 0;
-  }
-  button:focus{
-    outline: 0;
-  }
-  textarea:focus{
-    outline: 0;
-  }
- .home{
-   height: 100%;
- }
- .title{
-   width: 100%;
-   color: #1b1b1b;
-   text-align: center;
-   font-size: 1rem;
-   margin-top: 10px;
- }
-  .shelter{
-    width: 96%;
-    padding-top: 2%;
-    margin-left: 2%;
-    background-color: #ffffff;
-    overflow: hidden;
-  }
-  .shelter-item{
-    padding: 10px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    border: 1px solid #1b1b1b;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  .shelter-item:active{
-    opacity: 0.6;
-    transition: all .1s linear;
-  }
-  .left-image{
-    min-width: 80px;
-  }
-  .portrait{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-  }
-  .description{
-    padding-left: 15px;
-    color: #1b1b1b;
-    font-size: 16px;
-    text-align: left;
-  }
+select:focus {
+  outline: 0;
+}
+button:focus {
+  outline: 0;
+}
+textarea:focus {
+  outline: 0;
+}
+.home {
+  height: 100%;
+}
+.title {
+  width: 100%;
+  color: #1b1b1b;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.shelter {
+  width: 96%;
+  padding-top: 2%;
+  margin-left: 2%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.shelter-item {
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid #1b1b1b;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.shelter-item:active {
+  opacity: 0.6;
+  transition: all 0.1s linear;
+}
+.left-image {
+  min-width: 80px;
+}
+.portrait {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.description {
+  padding-left: 15px;
+  color: #1b1b1b;
+  font-size: 16px;
+  text-align: left;
+}
 </style>
