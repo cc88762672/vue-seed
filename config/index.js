@@ -5,8 +5,8 @@ const path = require('path');
 
 module.exports = {
     base: {
-        useEslint: true, // 启用eslint
-        eslintEmitWarning: true // eslint校验不通过时使用warning提示，默认为error
+        useEslint: false, // 启用eslint
+        eslintEmitWarning: false // eslint校验不通过时使用warning提示，默认为error
     },
     build: {
         env: require('./prod.env'),
